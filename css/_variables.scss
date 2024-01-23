@@ -1,0 +1,49 @@
+$screenXs: 480px;
+$screenSm: 768px;
+$screenMd: 992px;
+$screenLg: 1200px;
+$screenXl: 1600px;
+
+:root {
+  --bodyBg: #FFF9FA;
+  --bodyColor: #000;
+  --bodyColorRgb: 0,0,0;
+  --primary: #7F203B;
+  --primaryRgb: 127,32,59;
+  --second: #BF5C7A;
+  --secondRgb: 191,92,122;
+  //--light: #868686;
+  --light: #C7C7C7;
+  --lightRgb: 134,134,134;
+  --dark: #3D3D3D;
+  --success: #0E9F51;
+  --info: #1E78CB;
+  --warning: #EB5500;
+  --danger: #DD104E;
+  --magic: #9546BA;
+  --bgLight: #F5F0EC;
+  --fontFamily: 'Roboto', sans-serif;
+  --fontSize: 1rem;
+  --fontWeight: 400;
+  --lineHeight: 1.1875;
+  --modalPaddingH: 15px;
+  --modalPaddingH-: -15px;
+  --sectionSpace: 40px;
+  --transition: .2s ease;
+
+  @media (min-width: $screenSm) {
+    --sectionSpace: 60px;
+  }
+
+  @media (min-width: $screenLg) {
+    --sectionSpace: 40px;
+  }
+}
+
+
+@media (min-width: $screenSm) {
+  :root {
+    --modalPaddingH: 20px;
+    --modalPaddingH-: -20px;
+  }
+}

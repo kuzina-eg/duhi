@@ -1,0 +1,582 @@
+.review {
+  @media (min-width: $screenLg) {
+    .swiper {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  @media (min-width: $screenXl) {
+    .swiper {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+  }
+
+  &--product .swiper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.item-review {
+  position: relative;
+
+  &__photo {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 500 / 281;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    width: 38px;
+    //height: 27px;
+    height: auto;
+    aspect-ratio: 98 / 69;
+    background-image: url("../img/svg/yt-min.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: .2s ease;
+  }
+
+  &:hover &__btn {
+    transform: translate(-50%,-50%) scale(1.1);
+  }
+
+  &__title,
+  &__date {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__title {
+    margin-top: 5px;
+
+    a {
+      text-decoration: none;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        //aspect-ratio: 500 / 281;
+      }
+    }
+  }
+
+  &__date {
+    margin-top: 1.3em;
+    opacity: .4;
+  }
+
+  @media (min-width: $screenXs) {
+    &__title,
+    &__date {
+      font-size: 18px;
+    }
+
+    &__btn {
+      width: 46px;
+    }
+  }
+
+  @media (min-width: $screenSm) {
+    &__btn {
+      width: 85px;
+    }
+  }
+
+  @media (min-width: $screenMd) {
+    &__title,
+    &__date {
+      font-size: 20px;
+    }
+
+    &__btn {
+      width: 64px;
+    }
+  }
+
+  @media (min-width: $screenLg) {
+    &__photo {
+      margin-bottom: 20px;
+    }
+
+    &__title,
+    &__date {
+      font-size: 12px;
+    }
+
+    &__btn {
+      width: 48px;
+    }
+  }
+
+  @media (min-width: $screenXl) {
+    &__title,
+    &__date {
+      font-size: 14px;
+    }
+
+    &__btn {
+      width: 98px;
+    }
+  }
+}
+
+
+
+.testimonial {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -20px;
+  }
+
+  &__column {
+    width: 33.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $screenXs) {
+    &__column {
+      width: 25%;
+    }
+  }
+
+  @media (min-width: $screenLg) {
+    &__row {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.item-testimonial {
+  border: 1px solid rgba(214,187,195, 0.50);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 74px;
+  padding: 10px 20px 0;
+
+  &__photo {
+    height: 32px;
+    flex: 0 0 auto;
+
+    svg,
+    img {
+      width: auto;
+      max-width: none;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.166667;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $screenSm) {
+    height: 132px;
+    padding-top: 17px;
+
+    &__photo {
+      height: 58px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: $screenMd) {
+    height: 120px;
+    padding-top: 16px;
+
+    &__photo {
+      height: 50px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: $screenLg) {
+    height: 105px;
+    padding-top: 14px;
+
+    &__photo {
+      height: 46px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: $screenXl) {
+    height: 157px;
+    padding-top: 26px;
+
+    &__photo {
+      height: 65px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+.carousel-testimonial-user {
+  .swiper-wrapper {
+    display: block;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  @media (min-width: $screenMd) {
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.item-testimonial-user {
+  &,
+  &__detail,
+  &__feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__name,
+  &__date {
+    font-size: 16px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  .rating__star svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__more {
+    font-size: 15px;
+    font-weight: 500;
+
+    a {
+      color: var(--primary);
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 10px;
+  }
+
+  @media (min-width: $screenXs) {
+    &__detail {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__name,
+    &__date {
+      font-size: 20px;
+    }
+
+    &__name {
+      width: calc(100% - 175px);
+    }
+
+    &__date {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .rating__star svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    &__more {
+      font-size: 18px;
+    }
+
+    &__gallery {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+  }
+
+  @media (min-width: $screenSm) {
+    gap: 20px;
+
+    &__detail,
+    &__feedback {
+      gap: 20px;
+    }
+
+    &__name,
+    &__date,
+    &__more {
+      font-size: 28px;
+    }
+
+    &__name {
+      width: calc(100% - 240px);
+    }
+
+    &__gallery {
+      margin-top: 0;
+      margin-bottom: 0;
+      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 200px));
+    }
+  }
+
+  @media (min-width: $screenMd) {
+    gap: 10px;
+    padding: 10px 8px;
+    height: 100%;
+
+    &__detail,
+    &__feedback {
+      gap: 10px;
+    }
+
+    &__name,
+    &__date,
+    &__more {
+      font-size: 20px;
+    }
+
+    &__name {
+      width: calc(100% - 140px);
+    }
+
+    &__date {
+      width: 120px;
+      height: 1.2em;
+    }
+
+    .rating__star svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__gallery {
+      margin-bottom: 10px;
+      gap: 13px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &__feedback {
+      margin-top: auto;
+    }
+  }
+
+  @media (min-width: $screenLg) {
+    gap: 5px;
+    padding: 10px;
+
+    &__detail,
+    &__feedback {
+      gap: 5px;
+    }
+
+    &__name,
+    &__date,
+    &__more {
+      font-size: 14px;
+    }
+
+    &__name {
+      width: calc(100% - 140px);
+    }
+
+    &__date {
+      width: 120px;
+      height: 1.2em;
+    }
+
+    .rating__star svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &__gallery {
+      margin-bottom: 5px;
+      gap: 7px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__feedback {
+      margin-top: auto;
+    }
+  }
+}
+
+.item-photo-testimonial {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @media (min-width: $screenLg) {
+    width: 70px;
+  }
+}
+
+.item-feedback {
+  &__title {
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  &__descr {
+    color: rgba(var(--bodyColorRgb),.65);
+    font-style: italic;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  @media (min-width: $screenXl) {
+    &__title {
+      font-size: 13px;
+    }
+
+    &__descr {
+      font-size: 12px;
+    }
+  }
+}
+
+
+.carousel-review-user {
+  .swiper-slide {
+    width: 90px;
+  }
+
+  @media (min-width: $screenXs) {
+    .swiper-slide {
+      width: 120px;
+    }
+  }
+
+  @media (min-width: $screenSm) {
+    .swiper-slide {
+      width: 190px;
+    }
+  }
+}
+
+.item-review-user {
+  display: block;
+  position: relative;
+  transition: .2s ease;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 500px;
+    border: #FFFFFF 10px solid;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 4px dashed #616161;
+    border-radius: 500px;
+  }
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  @media (min-width: $screenXl) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

@@ -1,0 +1,319 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid var(--second);
+  background-color: var(--second);
+  padding: 10px 48px;
+  margin: 0;
+  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color .25s linear, background-color .25s linear, color .25s linear;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &--block + &--block {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  &:hover,
+  a:hover & {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+  }
+
+  &[disabled],
+  &.disabled {
+    border-color: var(--light);
+    background-color: var(--light);
+    cursor: default;
+    color: #FFFFFF;
+  }
+
+  &__icon {
+    margin-top: -5px;
+    margin-bottom: -5px;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+    }
+
+    &:only-child {
+      margin: 0;
+    }
+
+    svg {
+      display: block;
+
+      path {
+        fill: #FFFFFF;
+
+        .btn:hover & {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  &--outline {
+    border-color: var(--primary);
+    background-color: #FFFFFF;
+    color: var(--primary);
+    position: relative;
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .btn__icon {
+      svg path {
+        fill: var(--bodyColor);
+      }
+    }
+
+    &:hover .btn__icon svg path {
+      fill: var(--primary);
+    }
+
+    &[disabled],
+    &.disabled {
+      border-color: var(--light);
+      background: var(--light);
+      color: var(--light);
+    }
+
+    &-second {
+      border-color: var(--second);
+      background-color: transparent;
+      color: var(--second);
+    }
+  }
+
+  &--primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: var(--second);
+      border-color: var(--second);
+      color: #FFFFFF;
+
+      svg path {
+        fill: #FFFFFF;
+      }
+    }
+  }
+
+  &--success {
+    background-color: var(--success);
+    border-color: var(--success);
+  }
+
+  &--danger {
+    background-color: var(--danger);
+    border-color: var(--danger);
+  }
+
+  &-rounded {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    border: none;
+    padding: 10px 23px;
+    margin: 0;
+    background-color: #C2C2C2;
+    border-radius: 40px;
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+    user-select: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    transition: .25s linear;
+    text-transform: uppercase;
+
+    & + & {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #a2a2a2;
+    }
+
+    &.btn--success.active {
+      background-color: var(--success);
+    }
+
+    &.btn--danger.active {
+      background-color: var(--danger);
+    }
+  }
+
+  &--lg {
+    padding-top: .825rem;
+    padding-bottom: .825rem;
+    font-size: 16px;
+  }
+
+  @media (min-width: $screenXs) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &-rounded {
+      padding: 13px 20px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    &--lg {
+      font-size: 24px;
+    }
+  }
+
+  @media (min-width: $screenSm) {
+    padding: 19px 57px;
+    font-size: 28px;
+
+    &-rounded {
+      padding: 23px 34px;
+      font-size: 28px;
+    }
+
+    &--lg {
+      padding-top: .675rem;
+      padding-bottom: .675rem;
+      font-size: 48px;
+    }
+  }
+
+  @media (min-width: $screenMd) {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 22px;
+
+    &-rounded {
+      padding: 13px 20px;
+      font-size: 20px;
+    }
+
+    &--lg {
+      padding-top: .9rem;
+      padding-bottom: .9rem;
+      font-size: 32px;
+    }
+  }
+
+  @media (min-width: $screenLg) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+
+    &-rounded {
+      padding: 9px 12px;
+      font-size: 12px;
+    }
+
+    &--lg {
+      padding-top: .9rem;
+      padding-bottom: .9rem;
+      font-size: 22px;
+    }
+  }
+
+  &--block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    //padding-left: 10px;
+    //padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &--link {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #1D76C9;
+    font-size: 1.143rem;
+
+    .btn__icon svg path {
+      fill: #1D76C9;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: #00227A;
+
+      .btn__icon svg path {
+        fill: #00227A;
+      }
+    }
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  svg {
+    display: block;
+
+    path {
+      //fill: var(--primary);
+    }
+  }
+
+  &:hover svg path {
+    //fill: var(--second);
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .btn {
+    margin: 0;
+  }
+}
+

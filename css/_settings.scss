@@ -1,0 +1,20 @@
+html {
+  font-size: 14px;
+
+  @media (min-width: $screenXs) {
+    //font-size: 18px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $screenSm) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $screenMd) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $screenLg) {
+    font-size: 14px;
+  }
+}

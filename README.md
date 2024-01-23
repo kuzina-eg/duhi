@@ -1,2 +1,1 @@
 # duhi
-templates
